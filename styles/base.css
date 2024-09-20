@@ -122,11 +122,6 @@ main {
     color:rgb(186, 57, 6); /* idk matches the prawn shrimp things */
 }
 
-.resources a:visited {
-    color:rgb(2, 33, 49);
-    text-decoration: none;
-}
-
 footer {
     background-color: var(--headers-footers);
     color: white;
