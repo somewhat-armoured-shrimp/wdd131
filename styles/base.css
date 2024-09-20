@@ -1,35 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --headers-footers: rgb(1, 10, 42);
+    --accent: rgb(33, 75, 51);
+
+    --the-font: Chakra Petch;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
-    background-color: rgb(244, 241, 235);
+    background-color: rgb(2, 33, 49); /* rgb(248, 246, 244) */
+    font-family: var(--the-font);
+}
+
+p {
+    font-size: 18px;
+    color: #222;
 }
 
 header {
     margin: 0;
     padding: 1rem 0 0 0;
-    background-color: rgb(2, 22, 49);
+    background-color: var(--headers-footers);
     color: white;
     text-align: center;
 }
 
 .navigation {
     display: flex;
-    padding: 1.5rem;
     margin: 2.5rem 0 0 0;
-    justify-content: space-evenly;
-    background-color: rgb(141, 64, 64);
+    justify-content: space-around;
+    background-color: var(--accent);
 }
 
 .navigation a {
+    display: block;
+    padding: 1.5rem;
+    width: 100%;
     color: white;
     text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.navigation a:hover {
-    /* MAKE SOMETHING BETTER */
-    color: rgb(0, 0, 0);
+nav a:hover {
+    background-color: rgb(79, 109, 54);
+    font-weight: 800;
 }
 
 main {
@@ -37,29 +56,29 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
-    
 }
 
 .card {
     grid-column: 1 / 3;
     display: flex;
     flex-direction: column;
-    border-radius: 6px;
+    border-radius: 7px;
     background-color: white;
+    font-weight: 500;
 }
 
 .card h2 {
-    background-color: rgb(2, 22, 49);
+    background-color: var(--headers-footers);
     color: white;
     padding: 2rem;
     margin: 0;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
 }
 
 .about {
     padding: 0;
-    border: 1px solid rgba(2, 22, 49, 0.2);
+
     grid-column: 1 / 3;
     min-width: 300px;
 }
@@ -69,32 +88,43 @@ main {
     align-items: center;
 }
 
+.thing1 {
+    border-bottom: 1px solid rgba(79, 109, 54, 0.5);
+}
+
 .about img, p{
     margin: 1.5rem 2rem;
 }
 
 .resources {
     padding: 0;
-    border: 1px solid rgba(2, 22, 49, 0.2);
+    
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     text-align: center;
 }
 
-.resources div {
-    display: flex;
-    flex-direction: column;
-    margin: 8rem 0 0 0;
-    
+.resources li {
+    margin: 1.5rem;
+    font-size: 18px;
+    color: rgb(33, 75, 51);
 }
 
 .resources a {
-    margin: 1rem;
+    color: rgb(79, 109, 54);
+}
+
+.resources a:hover {
+    color:rgb(186, 57, 6); /* idk matches the prawn shrimp things */
 }
 
 footer {
-    background-color: rgb(2, 22, 49);
+    background-color: var(--headers-footers);
     color: white;
     text-align: center;
-    
+}
+
+footer p {
+    font-size: 14px;
+    color: white;
 }
