@@ -128,7 +128,7 @@ footer {
     text-align: center;
 }
 
-footer p {
+footer p, span {
     font-size: 14px;
     color: white;
 }
