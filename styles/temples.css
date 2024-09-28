@@ -1,0 +1,107 @@
+:root {
+    --header-footer: rgb(59, 77, 131);
+    --menu-why-not: rgb(39, 39, 39);
+
+    --the-font: Fira Sans;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--the-font);
+}
+
+header {
+    display: grid;
+    color: white;
+    background-color: var(--header-footer);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+h2 {
+    margin: 1.5rem 0 0 0;
+    font-size: 30px;
+}
+
+#menu {
+	font-size: 2rem;
+	border: 0;
+	background: none;
+	position: absolute;
+	top: 1.3rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: '☰';
+    color: white;
+}
+
+#menu.open::before {
+    content: '×';
+    font-size: 45px;
+}
+
+.navigation {
+    display: flex;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--menu-why-not);
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem 0;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navigation a:hover {
+    background-color: rgb(40, 47, 72);
+}
+
+/* important apparently 
+
+HOLY MOLY IMPORTANT */
+
+.open a {
+	display: block;
+}
+
+main {
+    display: grid;
+    max-width: 740px;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.figures {
+    justify-content: center;
+    margin: 1rem;
+}
+
+figcaption {
+    padding: 1rem;
+    color: var(--header-footer);
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--header-footer);
+    color: white;
+}
