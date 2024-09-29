@@ -31,11 +31,10 @@ h2 {
 
 #menu {
 	font-size: 2rem;
-	border: 0;
-	background: none;
 	position: absolute;
 	top: 1.3rem;
 	right: 1rem;
+    text-decoration: none;
 }
 
 #menu::before {
@@ -46,6 +45,9 @@ h2 {
 #menu.open::before {
     content: '×';
     font-size: 45px;
+    position: relative;
+    right: 0.2rem;
+    bottom: 0.3rem;
 }
 
 .navigation {
