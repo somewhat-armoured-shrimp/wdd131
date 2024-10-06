@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 03 - London, England</title>
+    <meta name="description" content="A short webpage about London">
+    <meta name="author" content="Sarah Toronto">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>London, England</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 700px)" srcset="images/big-ben-small.webp">
+                <source media="(min-width: 701px)" srcset="images/big-ben-big.webp">
+                <img src="images/big-ben-small.webp" alt="big ben. big clock tower" width="500">
+            </picture>
+        </div>
+        <div class="main-content">
+            <div class="container data">
+                <h2>Data</h2>
+                <table>
+                    <tr>
+                        <th>Location:</th>
+                        <td>Greater London, England</td>
+                    </tr>
+                    <tr>
+                        <th>Area:</th>
+                        <td>607 sq mi</td>
+                    </tr>
+                    <tr>
+                        <th>Population:</th>
+                        <td>9,748,000</td>
+                    </tr>
+                    <tr>
+                        <th>Languages:</th>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <th>Currency:</th>
+                        <td>Great British Pound (GBP)</td>
+                    </tr>
+                    <tr>
+                        <th>Time Zone:</th>
+                        <td>UTC+0</td>
+                    </tr>
+                    <tr>
+                        <th>Train Station:</th>
+                        <td>yeah</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="container weather">
+                <h2>Weather</h2>
+                <img src="images/rain-icon.svg" alt="raining cloud icon" width="150">
+                <table>
+                    <tr>
+                        <th>Temperature:</th>
+                        <td>9 °C</td>
+                    </tr>
+                    <tr>
+                        <th>Conditions:</th>
+                        <td>Rain</td>
+                    </tr>
+                    <tr>
+                        <th>Wind:</th>
+                        <td>16 km/h</td>
+                    </tr>
+                    <tr>
+                        <th>Wind Chill:</th>
+                        <td><span id="windchill"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>©️<span id="currentyear"></span> ☕ Sarah Toronto ☕ Washington</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

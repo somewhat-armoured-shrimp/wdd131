@@ -1,0 +1,64 @@
+@media (min-width: 700px) {
+    main {
+        position: relative;
+        background-color: var(--primary-color);
+    }
+    
+    .main-content h2 {
+        padding: 1rem 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        color: white;
+        border-radius: 5px;
+        box-shadow: 
+            0px 5px 10px rgba(123, 136, 143, 0.5),
+            inset 5px 5px 10px rgba(255, 168, 168, 0.55),
+            inset 0px 0px 10px 3px rgb(155, 29, 42);
+    }
+
+    .data, .weather {
+        padding: 0 0 1rem 0;
+        border-radius: 5px;
+    }
+
+    .hero img {
+        border: none;
+    }
+
+    table, td, th, tr {
+        padding: 0.3rem;
+    }
+
+    .data {
+        position: absolute;
+        top: 3rem;
+        left: 4rem;
+        width: 300px;
+        height: auto;
+        background-color: white;
+        border: none;
+    }
+
+    .weather h2::after {
+        content: ' 🌧️';
+    }
+
+    .weather img { 
+        display: none;
+    }
+    
+    .weather {
+        position: absolute;
+        right: 4rem;
+        bottom: 3rem;
+        width: 300px;
+        height: auto;
+        background-color: white;
+    }
+
+    footer {
+        margin: 0;
+        border: none;
+        position: relative;
+    }
+}
