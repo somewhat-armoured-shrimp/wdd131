@@ -1,0 +1,126 @@
+:root {
+    --header-footer: rgb(59, 77, 131);
+    --menu-why-not: rgb(39, 39, 39);
+
+    --the-font: Fira Sans;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--the-font);
+}
+
+header {
+    display: grid;
+    color: white;
+    background-color: var(--header-footer);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+h2 {
+    margin: 1.5rem;
+    font-size: 30px;
+}
+
+#menu {
+    font-size: 2rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    text-decoration: none;
+}
+
+#menu::before {
+    content: '☰';
+    color: white;
+}
+
+#menu.open::before {
+    content: '×';
+    font-size: 45px;
+    position: relative;
+    right: 0.2rem;
+    bottom: 0.3rem;
+}
+
+.navigation {
+    display: flex;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--menu-why-not);
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem 0;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navigation a:hover {
+    background-color: rgb(40, 47, 72);
+}
+
+/* important apparently 
+
+HOLY MOLY IMPORTANT */
+
+.open a {
+    display: block;
+}
+
+main {
+    display: grid;
+    max-width: 740px;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+#figures {
+    justify-content: center;
+}
+
+#figures section {
+    border: 1px solid rgba(5, 0, 139, 0.1);
+    margin: 1.5rem;
+    padding: 0 0 2rem 0;
+    background-color: rgba(0, 44, 176, 0.1);
+    border-radius: 2px;
+}
+
+#figures h3,
+#figures p {
+    padding: 0.1rem;
+}
+
+#figures span {
+    font-weight: 600;
+    color: var(--header-footer);
+}
+
+#figures img {
+    border: 7px solid white;
+    box-shadow:
+        0px 5px 20px rgba(72, 67, 126, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--header-footer);
+    color: white;
+}

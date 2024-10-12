@@ -1,0 +1,50 @@
+@media (min-width: 740px) {
+    header {
+        grid-template-columns: 1fr 2fr;
+        padding: 0;
+        width: 100%;
+    }
+
+    h1 {
+        justify-content: left;
+        padding: 0 0 0 3rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        flex-direction: row;
+        background-color: var(--header-footer);
+    }
+
+    .navigation a {
+        display: block;
+        padding: 2rem;
+    }
+
+    .navigation a:hover {
+        background-color: rgba(141, 208, 255, 0.1);
+    }
+
+    main {
+        display: grid;
+        max-width: 100%;
+
+    }
+
+    #figures {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #figures section {
+        width: 400px;
+        margin: 2rem;
+    }
+
+    /* #figures img {
+        
+    } */
+}
