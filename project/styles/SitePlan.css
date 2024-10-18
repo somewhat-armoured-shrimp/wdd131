@@ -1,0 +1,79 @@
+/* RENAME THE LINK IN THE SITE 
+PLAN DOCUMENT WHEN I ACTUALLY GET A NAME */
+
+/*
+potential shadows for button type things, still needs work.
+box-shadow:
+        inset 5px 5px 15px rgba(255, 255, 255, 0.11),
+        inset -3px -4px 5px rgba(0, 0, 0, 0.5),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.2);
+*/
+
+* {
+    margin: 0;
+
+}
+
+h1 {
+    background-color: #000320;
+    color: #d34d4d;
+    padding: 2.5rem;
+    font-family: Gugi;
+}
+
+body {
+    background-color: #fff;
+    font-family: Quicksand;
+    font-weight: 600;
+}
+
+h2,
+h3 {
+    font-family: Quicksand;
+}
+
+h2 {
+    color: #eee;
+    background-color: #313131;
+    padding: 1rem;
+}
+
+h3 {
+    padding: 1rem 1rem 0 1rem;
+}
+
+ol {
+    padding: 3rem;
+}
+
+ul {
+    padding: 2rem;
+}
+
+p {
+    padding: 4rem;
+}
+
+figure {
+    display: grid;
+}
+
+figcaption {
+    background-color: #313131;
+    color: #eee;
+    padding: 15px;
+    width: 320px;
+    font-family: Quicksand;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.wf img {
+    width: 300px;
+    height: 500px;
+    margin: 3rem;
+}
+
+.wf figcaption {
+    margin-top: 2rem;
+}
