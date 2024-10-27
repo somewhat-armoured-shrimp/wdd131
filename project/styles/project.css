@@ -1,0 +1,564 @@
+:root {
+    --primary-colour: #00011d;
+    --secondary-colour: #2A1129;
+    /*  #313131*/
+    --accent-colour: #d34d4d;
+    /* dude who am i kidding this is the
+    secondary colour now lmao ignore that*/
+
+    --heading-font: 'Gugi';
+    --paragraph-font: 'Quicksand';
+}
+
+body {
+    margin: 0;
+
+}
+
+header {
+    border: none;
+
+}
+
+h1 {
+    font-family: var(--heading-font);
+    background-color: var(--primary-colour);
+    color: var(--accent-colour);
+    padding: 2rem;
+    margin: 0;
+
+}
+
+h3 {
+    color: #fff;
+    padding-top: 1rem;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    font-weight: 600;
+    background-color: var(--primary-colour);
+}
+
+
+
+#h1home::after {
+    content: 'Home';
+}
+
+#h1tutorial::after {
+    content: 'Tutorial';
+}
+
+#h1gallery::after {
+    content: 'Gallery';
+}
+
+.menu {
+    font-size: 2rem;
+    position: absolute;
+    top: 1.8rem;
+    right: 1.5rem;
+    text-decoration: none;
+}
+
+.menu::before {
+    content: '☰';
+    color: var(--accent-colour);
+}
+
+.menu.open::before {
+    content: '×';
+    font-size: 45px;
+    position: relative;
+    right: 0.2rem;
+    bottom: 0.3rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+    /* background-color: var(--secondary-colour); */
+    border-bottom: 1px solid var(--accent-colour);
+}
+
+.navigation a {
+    display: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 1.3rem;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    /* background-color: rgba(211, 77, 77, 0.2); */
+    color: var(--accent-colour);
+    transition: 0.3s;
+}
+
+/* and the ever-important: */
+.open a {
+    display: block;
+}
+
+p,
+li {
+    color: #fff;
+    font-weight: 400;
+}
+
+footer {
+    padding: 3rem;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--accent-colour);
+    margin-top: 3rem;
+}
+
+
+
+
+/* /////////////////////////////////// */
+/* //// HOMEPAGE SPECIFIC CONTENT //// */
+/* /////////////////////////////////// */
+
+
+
+
+
+.home {
+    display: grid;
+    background-color: var(--primary-colour);
+    max-width: 1900px;
+}
+
+.youneedtherapy {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 0 0 -3rem 3rem;
+}
+
+.intro-container {
+    background-color: var(--accent-colour);
+    border: 1px solid var(--accent-colour);
+    border-radius: 50px;
+    margin: 6rem 2rem 3rem 2rem;
+
+}
+
+.intro-container p {
+    color: var(--primary-colour);
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    padding: 4rem;
+    margin: 0;
+}
+
+.home-content p {
+    margin: 3rem;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.linkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    margin: 3rem;
+
+}
+
+.linkbox a img {
+    margin-bottom: -4rem;
+    margin: 0;
+    width: 350px;
+    border-radius: 10px;
+    border: 10px solid var(--accent-colour);
+    transition: 0.3s;
+}
+
+.linkbox a img:hover {
+    box-shadow:
+        30px 30px 0px rgba(211, 77, 95, 0.2),
+        15px 15px 0px rgba(211, 77, 77, 0.3);
+    transition: 0.2s;
+}
+
+
+.link {
+    display: flex;
+    color: #fff;
+    font-size: 30px;
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* ////////////////////// */
+/* //// TUTORIAL CSS //// */
+/* ////////////////////// */
+
+
+
+
+
+
+.tutorial-main {
+
+    font-size: 20px;
+    position: relative;
+
+}
+
+.tutorial {
+    margin: 3rem;
+    max-width: 900px;
+}
+
+#sidebar h2 {
+    margin-left: 1rem;
+    margin-top: 10rem;
+
+}
+
+#sidebar {
+    color: #fff;
+    margin: 0 0 1rem 3rem;
+    display: none;
+    
+}
+
+#sidebar ol {
+    margin-top: 6rem;
+    list-style-type: disc;
+}
+
+#sidebar li {
+    margin-right: -2rem;
+    width: 180px;
+}
+
+#sidebar a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    margin: 1rem;
+    margin-left: -0.5rem;
+    max-width: 80%;
+    font-size: 16px;
+}
+
+#sidebar a:hover {
+    color: var(--accent-colour);
+    transition: 0.3s;
+}
+
+
+
+.disclaimer {
+    display: flex;
+    align-items: center;
+    background-color: rgb(211, 77, 77, 0.2);
+    border: 1px solid rgb(211, 77, 77, 0.6);
+    margin: 5rem 3rem;
+    border: 1px solid var(--accent-colour);
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 300px;
+    grid-column: 2 / 3;
+
+}
+
+.note {
+    background-color: rgb(211, 77, 77, 0.2);
+    border: 1px solid rgb(211, 77, 77, 0.6);
+    border-radius: 10px;
+}
+
+#moldy-note {
+    margin-top: 2rem;
+}
+
+#moldy-note a {
+    color: rgb(240, 100, 100);
+}
+
+.tutorial h2 {
+    margin-top: 3rem;
+    color: #fff;
+}
+
+.tutorial p {
+    padding: 1rem;
+}
+
+.tutorial img {
+    max-width: 900px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tutorial ul {
+    margin-left: 2rem;
+    font-size: 20px;
+}
+
+#strike {
+    text-decoration: line-through;
+}
+
+.compare {
+    display: flex;
+    border-radius: 10px;
+    border-right: 1px solid var(--secondary-colour);
+}
+
+
+.img-capt-pairs img {
+    display: grid;
+    border-radius: 0%;
+    border: 1px solid var(--primary-colour);
+
+}
+
+.fig1 img {
+    border-top-left-radius: 10px;
+}
+
+.fig2 img {
+    border-top-right-radius: 10px;
+
+}
+
+.captions {
+    height: 90px;
+    font-size: 16px;
+    background-color: var(--secondary-colour);
+    color: #fff;
+    margin: 0;
+}
+
+.cap1 {
+    border-bottom-left-radius: 10px;
+    border-left: 1px solid var(--primary-colour);
+}
+
+.cap2 {
+    border-bottom-right-radius: 10px;
+    border-left: 1px solid var(--primary-colour);
+}
+
+#finishedwp {
+    border: 1px solid var(--accent-colour);
+
+}
+
+
+#commentsection {
+    display: grid;
+    grid-column: 1 / 4;
+}
+
+.comment {
+    background-color: rgba(211, 77, 77, 0.2);
+    border: 1px solid rgb(211, 77, 77, 0.6);
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.comment h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user {
+    color: rgb(240, 100, 100);
+}
+
+.comment p {
+    color: var(--primary-colour);
+    background-color: #fff;
+    margin-bottom: 0;
+    border-radius: 10px;
+    padding: 1rem 1rem 4rem 1rem;
+    border: 1px solid rgba(211, 77, 77, 0.6);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* //// FORM SECTION //// */
+
+#form-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#form-buttons a {
+    color: white;
+    padding: 13px;
+    border: 1px solid rgba(211, 77, 77, 0.5);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#form-buttons a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--accent-colour);
+    transition: 0.3s;
+}
+
+#form.openForm {
+    display: block;
+}
+
+
+#mc-container {
+    display: flex;
+    grid-column: 1 / 4;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+#makecomment {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 2rem;
+    padding: 1.5rem;
+    background-color: var(--accent-colour);
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s;
+    
+
+}
+
+#makecomment:hover {
+    background-color: rgb(153, 40, 68);
+    box-shadow: inset 3px 3px 0px rgba(0, 1, 29, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+}
+
+#makecomment.openForm {
+    display: none;
+}
+
+form {
+    color: #fff;
+    display: none;
+    z-index: 1;
+}
+
+fieldset {
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(211, 77, 77, 0.5);
+    border-radius: 10px;
+}
+
+legend {
+    font-weight: 300;
+    padding: 0.5rem;
+}
+
+label {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    margin: 1rem;
+    color: var(--primary-colour);
+    border-radius: 10px;
+    padding: 13px;
+    font-family: var(--paragraph-font);
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: 4px double #d34d4d;
+}
+
+.required {
+    color: var(--accent-colour);
+}
+
+input[type=text] {
+    width: 200px;
+}
+
+input[type=submit] {
+    background-color: var(--accent-colour);
+    color: white;
+    transition: 0.3s;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(153, 40, 68);
+    box-shadow: inset 3px 3px 0px rgba(0, 1, 29, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+}
+
+
+
+
+/* ///////////////////////// */
+/* //// GALLERY SEGMENT //// */
+/* ///////////////////////// */
+
+
+.cringe {
+    color: var(--primary-colour);
+    padding: 1.5rem;
+    background-color: var(--accent-colour);
+    border-radius: 50px;
+    margin: 2rem;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+
+}
+
+.gallery div {
+    display: flex;
+    background-color: var(--secondary-colour);
+    margin: 2rem auto;
+    border: 10px solid var(--accent-colour);
+    border-radius: 10px;
+}

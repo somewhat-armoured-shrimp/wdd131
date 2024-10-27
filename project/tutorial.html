@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial | Your Favs are Just Blobs</title>
+    <meta name="description" content="The actual tutorial on how to do the lineless tracing thing">
+    <meta name="author" content="Sarah Toronto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+    <script defer src="scripts/project.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- do a thing where the pathfinding is what shows up as the title
+          when the thing is mobile ratio -->
+        <h1 id="h1tutorial">.</h1>
+        <a href="#" class="menu"></a>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+    <main class="tutorial-main">
+
+        <div id="sidebar">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#start">Start a new canvas</a></li>
+                <li><a href="#setup">Layer setup</a></li>
+                <li><a href="#naming">Layer naming (Optional step)</a></li>
+                <li><a href="#drawing">Actually drawing over the thing</a></li>
+                <li><a href="#colouring">Colouring</a></li>
+            </ol>
+        </div>
+        <p class="disclaimer">Disclaimer: this version of Clip Studio Paint is the only drawing program I've
+            ever used on anybody's computer, so I don't know how other programs are.
+            If you don't know something, there are near endless resources on the internet. Good luck and have fun in
+            Yaptown.</p>
+
+
+        <div class="tutorial">
+            <h2 id="start">Start a new canvas</h2>
+
+            <p>If you're not using those funky vector things that always
+                give you a clear image, make sure your canvas is
+                big enough so the pixels are barely detectable.</p>
+
+            <img src="images/canvas-hw.jpg" alt="canvas-hw.jpg" width="300" loading="lazy">
+
+            <p>At minimum, you could <i>probably</i> get away with using a canvas that's 1000x1500? Don't quote
+                me on it. Or you could go the safe route and use a canvas that is 1920x1080.</p>
+
+            <p class="note">Note: Ignore the numbers in the picture - I use the 'full' option on Windows for my
+                wallpapers, and that
+                allows me not to care about the exact aspect ratio, that's why there's so much 'um maybe's here.</p>
+
+            <p>Nab your screenshot from somewhere and copy-paste it to your empty canvas.</p>
+
+            <p>I'll be using this relatively high-quality one that could probably be a
+                wallpaper on its own, but I decided it's my victim:</p>
+
+            <img src="images/itty-bitty-yuuri.jpg" alt="itty-bitty-yuuri.jpg" width="300" loading="lazy">
+
+            <p>Itty bitty. Let's size up the image.</p>
+
+            <img src="images/adjusted-yuuri.jpg" alt="adjusted-yuuri.jpg" width="300" loading="lazy">
+
+            <div class="note" id="moldy-note">
+                <p>Note: The screenshots themselves do not need to be in a high resolution.
+                    Unless the character's dark clothes/features/whatever start bleeding
+                    into the background or some other dark thing, then you might need
+                    a more high quality image. There just have to be enough clues for you to
+                    correctly interpret the shapes of the characters.</p>
+
+                <p>Look at this <a href="images/moldy-yuuri.jpg" target="_blank">image</a>:</p>
+
+
+                <p>Even if I can count the individual pixels, there's still enough information to faithfully draw over
+                    it.</p>
+            </div>
+
+
+            <p>If your copied picture isn't already on its own layer, make sure that
+                it is. From there, use your program's scaling tool on the image or its
+                layer until the character is the size and position you want them
+                in. If needed, change the size of the canvas.</p>
+
+            <p>IF your image is stretching too wide or narrow, your
+                program's built-in scale tool should have a toggle somewhere to
+                keep your selection's original ratio. (On Clip Studio Paint, the
+                scale tool's settings should appear by your toolbar when you press
+                Ctrl+T. From there, there's a box you can check that says
+                'Keep ratio of original image'.)</p>
+
+            <h2 id="setup">Layer setup</h2>
+
+            <p>Now that you have your screenshot at the ready, now it's time to
+                make it transparent by selecting the picture's layer and
+                adjusting the <i>layer's</i> opacity. 30-69% is usually where I
+                put it. I find that doing this helps me see pen strokes, and
+                feels less visually noisy.</p>
+
+            <p>If distinguishing your pen strokes
+                from the image becomes an issue, you can always adjust the
+                opacity.</p>
+
+            <div class="compare">
+                <div class="img-capt-pairs fig1">
+                    <img src="images/compare-img-transp1.jpg" alt="compare-folder-transp1.jpg" width="300" loading="lazy">
+                    <p class="captions cap1">Figure 1: Dark transparent lines on dark clothes, 100% image opacity</p>
+                </div>
+                <div class="img-capt-pairs fig2">
+                    <img src="images/compare-img-transp2.jpg" alt="compare-folder-transp2.jpg" width="300" loading="lazy">
+                    <p class="captions cap2">Figure 2: Dark transparent lines on dark clothes, ~50% image opacity</p>
+                </div>
+            </div>
+
+            <p>Next, create a layer folder place it above your
+                screenshot layer. This is where all your drawing layers are going to
+                go. Set the opacity of the <i>folder</i> to about 60%
+                or whatever percentage allows you to see both the screenshot and your
+                pen strokes. I wouldn't recommend keeping the individual drawing
+                layers at anything other than 100% opacity, BUT! There are uses for it.</p>
+
+            <p>Why only change the opacity of the folder?</p>
+
+            <div class="compare">
+                <div class="img-capt-pairs fig1">
+                    <img src="images/compare-folder-transp1.jpg" alt="compare-folder-transp1.jpg" width="300" loading="lazy">
+                    <p class="captions cap1">Figure 1: Two drawing layers set at 60% opacity individually</p>
+                </div>
+                <div class="img-capt-pairs fig2">
+                    <img src="images/compare-folder-transp2.jpg" alt="compare-folder-transp2.jpg" width="300" loading="lazy">
+                    <p class="captions cap2">Figure 2: Two layers at 100% opacity inside a folder set at 60% opacity</p>
+                </div>
+            </div>
+
+            <p>The folder is just a unit for all the layers inside it and acts as
+                all its layers mashed into one. Can't draw on it, though.</p>
+
+            <h2 id="naming">Layer naming (Optional step)</h2>
+
+            <p>Okay. I assume you know how layers work. Above is synonymous with
+                front, below is synonymous with behind, etc.</p>
+
+            <p>You might want to name your layers descriptively and
+                concisely. You'll have your own naming conventions, but I do
+                something like 'front/back/backback _____', where a layer is named
+                'front' or 'back' depending on whether it's in front of another
+                layer of the same attribute.</p>
+
+            <p>Take the layer name, 'front skin', for example. It's the name of the
+                frontmost skin layer and belongs above the other skin layers, but
+                doesn't necessarily have to belong above a layer named 'back clothes'.</p>
+
+            <h2 id="drawing">Actually drawing over the thing</h2>
+
+            <p>For these steps I like to have:</p>
+
+            <ul>
+                <li>Pens with no pen pressure</li>
+                <li>A pen <i>with</i> pen pressure</li>
+                <li>An airbrush because I like drawing blush</li>
+                <li>Fill tool because I'm <span id="strike">lazy</span> efficent</li>
+                <li>Erasers with the same properties as my pens</li>
+            </ul>
+
+            <p>Outline the part you want to colour first. I like doing the head
+                first and prefer using a pen without pen pressure so I don't have to
+                worry about line width mid-stroke.</p>
+
+            <p>As for choosing colours (for this step in the process, at least), I use filler colours. These are
+                hastily-chosen and very loosely match the character's values (as
+                in 'brightness', not principles) in the original screenshot.</p>
+
+            <p>I do this for reasons related to contrast - I want to know where my pen stroke
+                ends and the screenshot colours begin. Brightly saturated or
+                complementary colours are nice for this.</p>
+
+
+            <p>Draw along the lineart (not within it), it doesn't have to be perfect.
+                Your aim is to capture the essence of your screenshot so you can play
+                with it.</p>
+
+            <p>Remember that every layer is basically just colourful blocks and blobs
+                that are either in front of or behind another blob.</p>
+
+            <p>Now, whether a layer belongs in front of another one <i>at all</i> comes
+                down to your better judgement. And by better judgement, I mean
+                'how much delicate erasing it would take for this to look right'.
+                For example:</p>
+
+            <img src="images/yuuri-no-frontclothes.jpg" alt="yuuri-no-frontclothes.jpg its not inappropriate I promise"
+                width="300" loading="lazy">
+
+            <p>I haven't traced his jacket yet. I <i>have</i> fully traced and finished
+                his head. His hands are on the same layer. I have no desire to change
+                it. I've captured him well. In this case, I'd put his jacket beneath
+                this front skin layer because the only erasing I would have to do is
+                a non-delicate procedure on his wrists, as opposed to carefully ruin
+                his beautiful face.</p>
+
+            <p class="note">Note: Delicate erasing is the only reason I can think of to change layer
+                opacity as opposed to folder opacity.
+            </p>
+
+            <p>You will end up having to do delicate erasing every once in a while,
+                but that's just drawing. Good layer choices just lessen the frequency.</p>
+
+            <p>Once traced, fill it in. You can add fine details later. Repeat process
+                until character is a colourful blob.</p>
+
+            <img src="images/filler-coloured-yuuri.jpg" alt="filler-coloured-yuuri.jpg" width="300" loading="lazy">
+
+            <p>Hope that's enough drawing stuff. On to colours.</p>
+
+
+            <h2 id="colouring">Colouring</h2>
+
+            <h3>Shapes</h3>
+
+            <p>Since your drawing layers offer no lineart, your colours are going to
+                be what distinguish shapes in your drawing. All in the name of understanding what you're seeing.</p>
+
+            <p>Like separating the neck and the head by making the neck a slightly
+                darker colour than the head so they don't bleed into each other. Plus it gives an illusion of depth.</p>
+
+            <p>However, if you feel there's not enough information in your shapes,
+                then add some detail on a new layer. How much you want your blobs
+                to meld together is up to you. I like a decent mix of detail and blobbiness.</p>
+
+            <img src="images/lineart-questionmark-x5.jpg" alt="lineart-questionmark-x5.jpg" width="300" loading="lazy">
+
+            <p class="note">Note: Even though it's cropped, you can see that I used lines to show this
+                character's coat lapels. It looks better and I could hardly tell it was a coat otherwise.</p>
+
+            <p>I like to use a clip layer (Mask layer? Clip mask? Who cares, same concept)
+                because it's just Alpha Lock but on a separate layer.</p>
+
+            <p>Speaking of layers, turns out they're important for this, too. At least for me.</p>
+
+
+            <h3>Layers</h3>
+
+            <p>My general philosphy is this: '<i>If I'm using a new colour, it's time to
+                    add a new layer'.</i> Even if the characters I'm colouring over
+                don't have very complex features.</p>
+
+            <p>The reason for this philosophy is because when I'm changing the filler colours
+                to the final colours, I just want to use Alpha Lock and change the blob colour with one humongous brush
+                stroke.
+                I don't want to have to worry too much that I'm infecting another blob with
+                the wrong colour.
+            </p>
+
+            <p>Ultimately, how you choose to do your layers is up to you. Do whatever is easiest for you.</p>
+
+
+            <h3>Values</h3>
+
+            <p>Ah yes, the hard part... for me to explain. I did say I was an amateur, all of this stuff
+                is intuition, and it's hard to put into words.</p>
+
+            <p>I can introduce you to a very crucial step in the process.</p>
+
+            <p>Earlier, when I was discussing filler colours, I briefly mentioned <i>value</i>.</p>
+
+            <p>Value is, in the simplest terms, how light or dark a colour is. There's probably more to it than that,
+                I'm not sure,
+                but right now that's how we'll be thinking of it.</p>
+
+            <p>We all have an understanding that there's light and dark colours, but sometimes the value
+                of a colour will shock you. You might think two colours are super different, but the moment
+                you see the greyscale version you'll realise that they are much closer in brightness than you thought.
+            </p>
+
+            <p>Why would that matter? You can probably think back to a time where you made something in your
+                picture darker or lighter, and it just felt... better, afterwards.
+            </p>
+
+            <p>Which is why it's good to check your values. Computers have made that easier, thankfully.</p>
+
+            <p>A way to check is to remove the colours entirely
+                by turning your drawing into a greyscale version of itself. Temporarily, of course.</p>
+
+            <p>How I've been doing this is by adding a layer at the very top
+                with a blending mode of 'color' or 'hue', and then painting the whole layer black.</p>
+
+            <p class="note">
+                Note: I truly don't know how accurate that method is. It's probably imperfect, but it gets the
+                job done.
+            </p>
+
+            <p>It doesn't even have to be all that contrasted. We aren't producing high-end stuff here, you're tracing
+                screenshots from your favourite anime. In the end, just make sure you can make out
+                the features in your drawing without it being an eyesore to you. That's really all. These are for your
+                eyes only.
+            </p>
+
+
+
+            <h3>Choosing your colours</h3>
+
+            <p>I'm just going to tell you to do what you want. Because in the end, you're making these wallpapers
+                for you. Is that a bit of a cop-out? Absolutely. But that doesn't mean it's not true. :)
+            </p>
+
+            <p>I personally chose my wallpaper palettes so that they would complement the colour
+                theming on my laptop. For the wallpaper featured in this tutorial, I chose a monochromatic(?)
+                blue palette where the blue becomes a little greener the lighter it gets.
+            </p>
+
+            <p>Sites like Coolors can generate you palettes as well. Random experimentation may be needed, but if all
+                your blobs are on their own layer and Alpha Locked/masked, it
+                should be a cakewalk. It'll take some trial and error, but that's life, dawg.</p>
+
+            <img src="images/y-wp1.jpg" alt="finished wallpaper. he's very blue" id="finishedwp" width="300" loading="lazy">
+        </div>
+        <div id="mc-container">
+            <a href="#form" id="makecomment">"Leave" a "comment"</a>
+        </div>
+        <form id="form">
+            <fieldset>
+                <legend>"Leave" a "comment"</legend>
+                <div>
+                    <label for="username">Username <span class="required">*</span><input type="text" id="username"
+                            name="username" required></label>
+                </div>
+
+                <label for="comment">Say something <span class="required">*</span></label>
+                <textarea id="comment" name="comment" rows="5" required></textarea>
+                <div id="form-buttons">
+                    <input type="submit" value="Leave Comment" id="submitcomment">
+                </div>
+            </fieldset>
+        </form>
+
+        <div id="commentsection">
+        
+        </div>
+    </main>
+    <footer>
+        <p>©️<span class="currentyear"></span></p>
+    </footer>
+</body>
+
+</html>

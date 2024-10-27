@@ -1,0 +1,154 @@
+@media (min-width: 750px) {
+    
+    #h1home::after, #h1tutorial::after, #h1gallery::after {
+        content: 'Your Favs are Just Blobs';
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation a {
+        display: block;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+
+    .youneedtherapy {
+        display: flex;
+        align-items: center;
+    }
+
+    .top-content, .linkboxes {
+        grid-column: 1 / 4;
+    }
+
+    .home-content {
+        grid-column: 2 / 3;
+    }
+
+    .intro-container {
+        margin: 2rem 5rem;
+
+    }
+
+    .linkboxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .linkbox a img {
+        width: 500px;
+        transition: 0.3s;
+    }
+
+
+
+
+    /* //////////////// */
+    /* TUTORIAL SEGMENT */
+    /* //////////////// */
+
+    .tutorial {
+        margin: 1rem;
+        
+    }
+
+    .tutorial-main {
+        display: grid;
+        grid-template-columns: .5fr 3.5fr 1.5fr;
+        grid-template-rows: 0px;
+    }
+
+    .tutorial {
+        grid-column: 2 / 3;
+    }
+
+    #sidebar {
+        grid-column: 3 / 4;
+        display: block;
+        /* height: 1300px; */
+        /* ok the height thing is a huge cop out to keep my sanity at 9pm */
+    }
+
+    .disclaimer {
+        height: 50%;
+    }
+
+    
+
+    .tutorial-main form, .tutorial-main .comment {
+        grid-column: 1 / 4;
+        margin-bottom: 1rem;
+
+    }
+
+    .captions {
+        font-size: 18px;
+    }
+
+    #makecomment {
+        width: 300px;
+        margin: 2rem 5rem -2rem 0rem;
+    }
+
+    form {
+        grid-column: 1 / 4;
+    }
+
+    fieldset {
+        margin: 5rem;
+        margin-bottom: -1rem;
+    }
+
+    input[type=submit] {
+        width: 200px;
+        align-self: flex-end;
+        
+    }
+
+    .comment {
+        margin: 4rem 5rem;
+        margin-bottom: -1rem;
+        grid-column: 1 / 4;
+    }
+
+
+
+
+
+
+
+    /* /////////////////////// */
+    /* //// gallery stuff //// */
+    /* /////////////////////// */
+
+
+    .gallery {
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .gallery div {
+        margin: 1rem;
+        
+    }
+
+    .gallery img {
+        width: 337px;
+    }
+
+
+}
